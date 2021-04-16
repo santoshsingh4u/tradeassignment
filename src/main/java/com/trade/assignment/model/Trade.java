@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.Type;
 
@@ -44,10 +46,12 @@ public class Trade {
 	
 	@Type(type = "date")
 	//@Column(name="maturitydate")
+	@Temporal(TemporalType.DATE)
 	private Date maturitydate;
 	
 	@Type(type = "date")
-	@Column(name="createddate")
+	@Temporal(TemporalType.DATE)
+//	@Column(name="createddate")
 	private Date createddate;	
 	
 	//@Column(name="expired")
@@ -85,86 +89,86 @@ public class Trade {
 //	/**
 //	 * @return the version
 //	 */
-//	public Integer getVersion() {
-//		return version;
-//	}
-//
-//	/**
-//	 * @param version the version to set
-//	 */
-//	public void setVersion(Integer version) {
-//		this.version = version;
-//	}
-//
-//	/**
-//	 * @return the counterpartyid
-//	 */
-//	public String getCounterpartyid() {
-//		return counterpartyid;
-//	}
-//
-//	/**
-//	 * @param counterpartyid the counterpartyid to set
-//	 */
-//	public void setCounterpartyid(String counterpartyid) {
-//		this.counterpartyid = counterpartyid;
-//	}
-//
-//	/**
-//	 * @return the bookid
-//	 */
-//	public String getBookid() {
-//		return bookid;
-//	}
-//
-//	/**
-//	 * @param bookid the bookid to set
-//	 */
-//	public void setBookid(String bookid) {
-//		this.bookid = bookid;
-//	}
-//
-//	/**
-//	 * @return the maturitydate
-//	 */
-//	public Date getMaturitydate() {
-//		return maturitydate;
-//	}
-//
-//	/**
-//	 * @param maturitydate the maturitydate to set
-//	 */
-//	public void setMaturitydate(Date maturitydate) {
-//		this.maturitydate = maturitydate;
-//	}
-//
-//	/**
-//	 * @return the createddate
-//	 */
-//	public Date getCreateddate() {
-//		return createddate;
-//	}
-//
-//	/**
-//	 * @param createddate the createddate to set
-//	 */
-//	public void setCreateddate(Date createddate) {
-//		this.createddate = createddate;
-//	}
-//
-//	/**
-//	 * @return the expired
-//	 */
-//	public String getExpired() {
-//		return expired;
-//	}
-//
-//	/**
-//	 * @param expired the expired to set
-//	 */
-//	public void setExpired(String expired) {
-//		this.expired = expired;
-//	}
+	public Integer getVersion() {
+		return version;
+	}
+
+	/**
+	 * @param version the version to set
+	 */
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
+
+	/**
+	 * @return the counterpartyid
+	 */
+	public String getCounterpartyid() {
+		return counterpartyid;
+	}
+
+	/**
+	 * @param counterpartyid the counterpartyid to set
+	 */
+	public void setCounterpartyid(String counterpartyid) {
+		this.counterpartyid = counterpartyid;
+	}
+
+	/**
+	 * @return the bookid
+	 */
+	public String getBookid() {
+		return bookid;
+	}
+
+	/**
+	 * @param bookid the bookid to set
+	 */
+	public void setBookid(String bookid) {
+		this.bookid = bookid;
+	}
+
+	/**
+	 * @return the maturitydate
+	 */
+	public Date getMaturitydate() {
+		return maturitydate;
+	}
+
+	/**
+	 * @param maturitydate the maturitydate to set
+	 */
+	public void setMaturitydate(Date maturitydate) {
+		this.maturitydate = maturitydate;
+	}
+
+	/**
+	 * @return the createddate
+	 */
+	public Date getCreateddate() {
+		return createddate;
+	}
+
+	/**
+	 * @param createddate the createddate to set
+	 */
+	public void setCreateddate(Date createddate) {
+		this.createddate = createddate;
+	}
+
+	/**
+	 * @return the expired
+	 */
+	public String getExpired() {
+		return expired;
+	}
+
+	/**
+	 * @param expired the expired to set
+	 */
+	public void setExpired(String expired) {
+		this.expired = expired;
+	}
 
 	@Override
 	public String toString() {

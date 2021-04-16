@@ -3,6 +3,7 @@
  */
 package com.trade.assignment.repository;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,6 +22,8 @@ public interface TradeRepository extends CrudRepository<Trade,Long >
 {
 	// to match the field
 	Iterable<Trade> findBytradeid(String string);
+
+	public List<Trade> findAllBymaturitydate(Date maturitydate);
 
 
 
